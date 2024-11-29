@@ -50,3 +50,13 @@ document.getElementById("sendMessageBtn").addEventListener("click", function (ev
       button.textContent = "Send Message";
     });
 });
+
+
+document.getElementById('downloadCv').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent default anchor behavior
+
+  const link = document.createElement('a');
+  link.href = './image/Resume.pdf'; // Path to the resume file (local file)
+  link.download = 'Resume.pdf'; // Specify the file name for download
+  link.click();
+});
